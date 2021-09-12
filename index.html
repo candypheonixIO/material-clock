@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Material Clock</title>
+
+
+    <!--
+        Style sheet
+    -->
+
+    <link rel="stylesheet" href="./styling/stylesheet.css">
+
+    
+    
+    <!--
+        Scripting
+    -->
+
+    <script src="./javascript/geolocation.js" type="module"></script>
+    <script src="./javascript/weather.js" type="module"></script>
+    <script src="./javascript/clock.js"></script>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="clock">
+
+            <div class="seconds__hand" id="seconds">
+                <img src="./assets/svg/SecondHand.svg" 
+                 alt="Second hand">
+            </div>
+
+            <div class="minutes__hand" id="minutes">
+                <img src="./assets/svg/MinuteHand.svg" 
+                 alt="Minute hand">
+            </div>
+
+            <div class="hours__hand" id="hours">
+                <img src="./assets/svg/HourHand.svg" 
+                 alt="Hour hand">
+            </div>
+
+            <div class="face">
+                <img src="./assets/svg/ClockFace.svg" alt="Clock face">
+            </div>
+
+        </div>
+
+        <div class="weather">
+            <div class="detail">
+                <div id="city">
+                    <!--
+                        Display city name with 'weather.js'.
+                    -->
+                </div>
+    
+                <div id="weather__description">
+                    <!--
+                        Display weather description with 'weather.js'.
+                    -->
+                </div>
+            </div>
+
+            <div class="detail temperature" >
+                <div id="temp">
+                    <!--
+                        Display current temperature with 'weather.js'.
+                    -->
+                </div>
+
+                <div id="feels__like">
+                    <!--
+                        Display current temp "Feels like" descriptor with 'weather.js'.
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

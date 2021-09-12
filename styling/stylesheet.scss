@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;400;900&display=swap');
+@import url('./raw css/variables.css');
+@import url('./raw css/animations.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Urbanist', sans-serif;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+// elements by id
+#city {
+    text-transform: capitalize;
+    font-size: 2vw;
+}
+
+#weather__description {
+    text-transform: capitalize;
+    font-size: 1vw;
+}
+
+#temp::after {
+    content: '°C';
+}
+
+#feels__like::before {
+    content: 'Feels like: ';
+}
+#feels__like::after {
+    content: '°C';
+}
+
+// elements by class
+
+.container {
+    position: relative;
+}
+
+.clock {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    aspect-ratio: 1/1;
+
+    width: 20vw;
+
+    background: var(--forground);
+    border-radius: 100%;
+
+    box-shadow: .32rem .5rem 1rem rgba(0,0,0,0.1);
+
+    // Hands
+
+    .seconds__hand, .minutes__hand, .hours__hand {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+
+        aspect-ratio: 1/1;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // Hand images 
+        img {
+            width: 90%;
+        }
+    }
+
+    .face {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+
+        aspect-ratio: 1/1;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.weather {
+    //background: var(--background);
+    background: inherit;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+
+    top: 1rem;
+    right: 1rem;
+
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: .32rem .5rem 1rem rgba(0,0,0,0.1);
+
+    .detail {
+        padding: 1rem;
+    }
+
+    .temperature {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: row;
+
+        div {
+            padding: 1rem;
+        }
+    }
+}
